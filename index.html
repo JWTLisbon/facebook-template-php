@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Facebook-template-php by JWTLisbon</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Facebook-template-php</h1>
+        <p>example facebook app for heroku</p>
+
+        <p class="view"><a href="https://github.com/JWTLisbon/facebook-template-php">View the Project on GitHub <small>JWTLisbon/facebook-template-php</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/JWTLisbon/facebook-template-php/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/JWTLisbon/facebook-template-php/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/JWTLisbon/facebook-template-php">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="facebookheroku-sample-app----php" class="anchor" href="#facebookheroku-sample-app----php"><span class="octicon octicon-link"></span></a>Facebook/Heroku sample app -- PHP</h1>
+
+<p>This is a sample app showing use of the Facebook Graph API, written in PHP, designed for deployment to <a href="http://www.heroku.com/">Heroku</a>.</p>
+
+<h2>
+<a name="run-locally" class="anchor" href="#run-locally"><span class="octicon octicon-link"></span></a>Run locally</h2>
+
+<p>Configure Apache with a <code>VirtualHost</code> that points to the location of this code checkout on your system.</p>
+
+<p><a href="https://developers.facebook.com/apps">Create an app on Facebook</a> and set the Website URL to your local VirtualHost.</p>
+
+<p>Copy the App ID and Secret from the Facebook app settings page into your <code>VirtualHost</code> config, something like:</p>
+
+<pre><code>&lt;VirtualHost *:80&gt;
+    DocumentRoot /Users/adam/Sites/myapp
+    ServerName myapp.localhost
+    SetEnv FACEBOOK_APP_ID 12345
+    SetEnv FACEBOOK_SECRET abcde
+&lt;/VirtualHost&gt;
+</code></pre>
+
+<p>Restart Apache, and you should be able to visit your app at its local URL.</p>
+
+<h2>
+<a name="deploy-to-heroku-via-facebook-integration" class="anchor" href="#deploy-to-heroku-via-facebook-integration"><span class="octicon octicon-link"></span></a>Deploy to Heroku via Facebook integration</h2>
+
+<p>The easiest way to deploy is to create an app on Facebook and click Cloud Services -&gt; Get Started, then choose PHP from the dropdown.  You can then <code>git clone</code> the resulting app from Heroku.</p>
+
+<h2>
+<a name="deploy-to-heroku-directly" class="anchor" href="#deploy-to-heroku-directly"><span class="octicon octicon-link"></span></a>Deploy to Heroku directly</h2>
+
+<p>If you prefer to deploy yourself, push this code to a new Heroku app on the Cedar stack, then copy the App ID and Secret into your config vars:</p>
+
+<pre><code>heroku create --stack cedar
+git push heroku master
+heroku config:add FACEBOOK_APP_ID=12345 FACEBOOK_SECRET=abcde
+</code></pre>
+
+<p>Enter the URL for your Heroku app into the Website URL section of the Facebook app settings page, hen you can visit your app on the web.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/JWTLisbon">JWTLisbon</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
